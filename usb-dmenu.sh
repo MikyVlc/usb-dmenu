@@ -98,7 +98,7 @@ udisksctl monitor | while read -r line; do
 	# Buscar discos con transporte USB
 	for disk in $(lsblk -pn -o NAME,TYPE,TRAN | awk '$2=="disk" && $3=="usb" {print $1}'); do
 	    # Particiones de ese disco
-	    parts=($(lsblk -pn -o NAME,TYPE "$disk" | awk '$2=="part"{print $1}')
+	    parts=($(lsblk -pn -o NAME,TYPE "$disk" | awk '$2=="part"{print $1}'))
 	    if [ ${#parts[@]} -gt 0 ]; then
 	        devices+=("${parts[@]}")
 	    else

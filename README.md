@@ -29,13 +29,13 @@ Dale permisos de ejecución al script:
 
 ▶️ Uso
 
-Ejecuta el script desde tu terminal o lánzalo con un atajo de teclado añadiendo el argumento "manual":
+Ejecuta el script desde tu terminal y/o lánzalo con un atajo de teclado añadiendo el argumento "manual":
 
 Para ejecutarlo en el shell (daemon):
 
     /path/to/usb-dmenu.sh
     
-Para ejecutarlo con un atajo manualmente:
+Para ejecutarlo con un atajo manualmente desde sxhkd o similar:
 
     /path/to/usb-dmenu.sh manual
     

@@ -55,7 +55,7 @@ Así se ve en funcionamiento en EndeavourOS con dmenu:
 
 📌 Notas
 
-    Necesitas permisos para montar/dispositivo, así que si no tienes permisos de usuario podrías necesitar udisks2 configurado correctamente o usar sudo.
+    Necesitas permisos para montar, así que si tu usuario no tiene permisos podrías necesitar udisks2 configurado correctamente o usar sudo.
 
     El script está pensado para un entorno gráfico con X11 y dmenu instalado.
 

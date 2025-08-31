@@ -37,15 +37,23 @@ _eject() {
     # Nombre legible del dispositivo
     model=$(lsblk -dn -o VENDOR,MODEL "$parent" | tr -s ' ')
 
-    # Intentar expulsar el disco primero
-    if !udisksctl unmount -b "$dev" &>/dev/null; then
-	udisksctl power-off -b "$parent" &>/dev/null
+    # Chequear el verdadero estado del dispositivo en /proc/mounts
+    if grep -q "^$dev " /proc/mounts; then
+        # Intentar desmontar
+        if udisksctl unmount -b "$dev" &>/dev/null; then
+            udisksctl power-off -b "$parent" &>/dev/null
+            _notify "󱊟 Dispositivo USB $model expulsado con éxito"
+        else
+            _notify "⚠️ No se ha podido desmontar $model (está en uso)"
+        fi
     else
-        udisksctl unmount -b "$dev" &>/dev/null
-        udisksctl power-off -b "$parent" &>/dev/null
+        # No estaba montado
+        if udisksctl power-off -b "$parent" &>/dev/null; then
+            _notify "󱊞 Dispositivo USB $model expulsado con éxito"
+        else
+            _notify "⚠️ No se ha podido apagar $model"
+        fi
     fi
-
-    _notify "Dispositivo USB $model expulsado con éxito"
 }
 
 _mount() {

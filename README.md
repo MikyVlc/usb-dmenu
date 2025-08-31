@@ -1,6 +1,6 @@
 # usb-dmenu
 
-Script sencillo escrito en el shell para gestionar dispositivos USB desde un menú gráfico ligero (como bspwm o i3) utilizando dmenu.  
+Script sencillo escrito en el shell para gestionar dispositivos USB desde un gestor de ventanas ligero (como bspwm o i3) utilizando dmenu.  
 La idea es poder acceder rápidamente a tus memorias USB sin necesidad de comandos de montaje ni de depender de gestores de archivos.
 
 ---

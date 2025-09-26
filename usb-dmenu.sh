@@ -10,8 +10,8 @@ if [ "$1" != "manual" ]; then
     trap "rm -f $PIDFILE" EXIT
 fi
 
-export DISPLAY=:0
-export XAUTHORITY=$HOME/.Xauthority
+#export DISPLAY=:0
+#export XAUTHORITY=$HOME/.Xauthority
 export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus
 
 # ....Aquí puedes cambiar la apariencia de tu usb-dmenu....

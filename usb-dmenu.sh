@@ -12,12 +12,13 @@ fi
 
 #export DISPLAY=:0
 #export XAUTHORITY=$HOME/.Xauthority
-export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus
+#export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus
 
 # ....Aquí puedes cambiar la apariencia de tu usb-dmenu....
 dmenu_cmd() {
-    dmenu -b -p "󱊞 USB menu" -i -fn "HackNerdFontMono-21" \
-    -nb '#240041' -nf '#c79bff' -sf '#00ffb7' -sb '#900048'
+	dmenu -p "󱊞 USB menu" -i -fn "Inconsolata CondensedBlack-21" \
+	-nb '#240041' -nf '#c79bff' -sf '#00ffb7' -sb '#900048'
+#    dmenu -b -p "󱊞 USB menu" -i -fn "HackNerdFontMono-21" -nb '#240041' -nf '#c79bff' -sf '#00ffb7' -sb '#900048'
 }
 
 _notify() {

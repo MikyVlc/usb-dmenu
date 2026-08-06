@@ -2,6 +2,7 @@
 
 Script sencillo escrito en el shell para gestionar dispositivos USB desde un gestor de ventanas ligero (como bspwm o i3) utilizando dmenu.  
 La idea es poder acceder rápidamente a tus memorias USB sin necesidad de comandos de montaje ni de depender de gestores de archivos.
+Nota: Este script tambien funciona en Wayland con XFCE (wayfire) ✅
 
 ---
 
@@ -57,7 +58,7 @@ Así se ve en funcionamiento en EndeavourOS con dmenu:
 
     Necesitas permisos para montar, así que si tu usuario no tiene permisos podrías necesitar udisks2 configurado correctamente o usar sudo.
 
-    El script está pensado para un entorno gráfico con X11 y dmenu instalado.
+    El script está pensado para un entorno gráfico con X11 (probado también en Wayland) y dmenu instalado.
 
     Este software viene sin ninguna garantía.
 
